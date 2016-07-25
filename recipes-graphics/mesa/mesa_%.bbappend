@@ -22,8 +22,6 @@ python () {
 # FIXME: Dirty hack to allow use of Vivante GPU libGL binary
 do_install_append_mx6 () {
     if [ "${USE_VIV_LIBGL}" = "yes" ]; then
-        rm -f ${D}${libdir}/libGL.* \
-              ${D}${includedir}/GL/gl.h \
-              ${D}${includedir}/GL/glext.h
+        rm -f ${D}${libdir}/libGL.*
     fi
 }
